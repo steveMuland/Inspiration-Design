@@ -1,0 +1,283 @@
+
+
+/* Navigation bar*/
+#navigationBar
+{
+
+ position: fixed; /* Set the navbar to fixed position */
+ top: 0; /* Position the navbar at the top of the page */   
+ width: 100%; /* Full width */
+ z-index: 20;   
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ min-height: 8vh;
+ background-color: #2a2c3a;
+ opacity: 90%;
+ font-family: 'Poppins', sans-serif;
+ 
+}
+
+
+/* The button for small screen */
+.smallscreen-button {
+    display: none;
+  }
+
+
+.logo{
+    color: rgb(204, 200, 200);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    
+  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 3px 3px;
+  text-decoration: none;
+   
+}
+
+.nav-link:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+  }
+
+.nav-links li{
+list-style: none;
+}
+
+.nav-links a{
+    color: rgb(204, 200, 200);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(204, 200, 200);
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+
+
+@media screen and (max-width: 1024px)
+    {
+  
+      .nav-links{
+       
+        width: 60%;
+       
+      }
+    }
+
+
+@media screen and (max-width: 768px){
+
+.carousel-text, .cbtn {
+
+  display: none;
+
+}
+
+
+/* The button for small screen */
+.smallscreen-button {
+    display: inline-block;
+    font-size: small;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+    .b-color1{
+        background-color: #fa440c;
+        color: rgb(248, 245, 245);
+        border: 0.5px solid #fa440c; 
+    }
+
+    .b-color2{
+        background-color: #f73851;
+        color: rgb(248, 245, 245);
+        border: 0.5px solid #f73851; 
+    }
+    .b-color3{
+        background-color: #b95a02;
+        color: rgb(245, 248, 246);
+        border: 0.5px solid #b95a02; 
+        font-size: x-small;
+    }
+
+    .b-color4{
+        background-color: #053d6b;
+        color: rgb(245, 248, 246);
+        border: 0.5px solid #053d6b; 
+        font-size: x-small;
+    }
+
+
+
+    .b-color5{
+        background-color: #0276acea;
+        color: rgb(245, 248, 246);
+        border: 0.5px solid #0276acea; 
+        font-size: x-small;
+    }
+
+    
+    .b-color6{
+        background-color: #910c2dea;
+        color: rgb(245, 248, 246);
+        border: 0.5px solid #910c2dea; 
+        font-size: small;
+    }
+
+    .b-color7{
+        background-color: #1c0f91ea;
+        color: rgb(245, 248, 246);
+        border: 0.5px solid #1c0f91ea; 
+        font-size: x-small;
+    }
+
+    .b-color8{
+        background-color: #331000ea;
+        color: rgb(245, 248, 246);
+        border: 0.5px solid #331000ea; 
+        font-size: x-small;
+    }
+
+    .smallscreen-button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+    .smallscreen-button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+    .smallscreen-button:hover span {
+        padding-right: 25px;
+      }
+      
+    .smallscreen-button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+
+
+
+
+    body{
+       overflow-x: hidden;
+    }
+
+   .nav-links{
+       position: absolute;
+       z-index: 1;
+       right: 0px;
+       height: 41vh;
+       top: 8vh;
+       background-color: #1f1f22;
+       display: flex;
+       flex-direction: column;
+       align-items:flex-start;
+       margin-right: 0px;
+       padding-right: 0px;
+       width: 35%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+
+   }
+
+   .nav-links li{
+       opacity: 0;
+   }
+
+   .burger{
+       display: block;
+       cursor: pointer;
+   }
+
+}
+
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+       opacity: 0;
+       transform: translateX(50px);
+    }
+    to{
+       opacity: 1;
+       transform: translateX(0px);
+    }
+}
+
+
+
+.toggle .line1{
+ transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2{
+ opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+#img1{
+  
+    background-image: url("https://github.com/steveMuland/Inspiration-Design/blob/main/imgsWebsite/imgs/3.png?raw=true");
+     background-size: contain; 
+     /* background-repeat: repeat; */
+  }
+
+#img2{
+    background-image: url("https://github.com/steveMuland/Inspiration-Design/blob/main/imgsWebsite/imgs/Group108.jpg?raw=true");
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+  }
+
+  #img3{
+    background-image: url("https://github.com/steveMuland/Inspiration-Design/blob/main/imgsWebsite/imgs/Gro.jpg?raw=true");
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+  }
+
+  #img4{
+    background-image: url("https://github.com/steveMuland/Inspiration-Design/blob/main/imgsWebsite/imgs/Business.jpg?raw=true");
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+  }
